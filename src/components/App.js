@@ -5,7 +5,6 @@ import PokeList from "./PokeList";
 
 function App() {
   const [pokedex, setPokedex] = useState(pokemon);
-  console.log(pokedex);
   return (
     <div>
       <header className="header">
