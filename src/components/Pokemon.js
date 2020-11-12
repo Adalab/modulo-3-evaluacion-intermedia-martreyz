@@ -1,6 +1,9 @@
 import "../stylesheets/Pokemon.scss";
 
 const Pokemon = (props) => {
+  const types = props.types.map((type) => {
+    return <li className="main__list-typesItem">{type}</li>;
+  });
   return (
     <li className="main__list-item">
       <img
@@ -10,7 +13,7 @@ const Pokemon = (props) => {
         alt={props.name}
       />
       <h2 className="main__list-title">{props.name}</h2>
-      <ul className="main__list-types">{props.types}</ul>
+      <ul className="main__list-types">{types}</ul>
     </li>
   );
 };
