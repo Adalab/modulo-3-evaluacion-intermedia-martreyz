@@ -1,6 +1,6 @@
 import "../stylesheets/App.scss";
 import pokemon from "../data/pokemon.json";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import PokeList from "./PokeList";
 
 const favPokemons = [];
@@ -19,8 +19,6 @@ function App() {
     }
     setFavPokedex([...favPokemons]);
   };
-
-  useEffect(() => console.log(favPokemons));
 
   return (
     <div>
