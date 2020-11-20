@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import PokeList from "./PokeList";
 
 function App() {
-  const [pokedex, setPokedex] = useState(pokemon);
+  const [pokedex] = useState(pokemon);
   return (
     <div>
       <header className="header">
