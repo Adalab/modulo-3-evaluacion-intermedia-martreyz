@@ -9,8 +9,18 @@ const Pokemon = (props) => {
       </li>
     );
   });
+  const addToFavourites = (ev) => {
+    const pokemonIndex = ev.currentTarget.id;
+    props.addToFavourites(pokemonIndex);
+  };
+
   return (
-    <li key={props.id} className="main__list-item">
+    <li
+      onClick={addToFavourites}
+      id={props.index}
+      key={props.id}
+      className={"main__list-item " + props.classN}
+    >
       <img
         className="main__list-img"
         title={"Imagen de " + props.name}
